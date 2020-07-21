@@ -1,6 +1,5 @@
 // 페이지 중앙 시계 기능
-const clockContainer = document.querySelector(".clock"),
-    clockText = clockContainer.querySelector(".clock_text");
+const clockContainer = document.querySelector(".js-clock .clock__text");
 
 function getTime() {
     const time = new Date();
@@ -9,9 +8,7 @@ function getTime() {
     const seconds = time.getSeconds();
     // 백틱 : `` >  ${}를 사용해서 변수명과 문자열을 결합할 때 사용
     const now = 
-    `${hours < 10 ? `0${hours}` : hours}:
-    ${minutes < 10 ? `0${minutes}` : minutes}:
-    ${seconds < 10 ? `0${seconds}` : seconds}`;
+    `${hours < 10 ? `0${hours}`:hours}:${minutes < 10 ? `0${minutes}`:minutes}:${seconds < 10 ? `0${seconds}`:seconds}`;
 
     clockContainer.innerHTML = now;
 }

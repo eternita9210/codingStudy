@@ -1,5 +1,5 @@
 const body = document.querySelector("body"),
-    locationText = document.querySelector(".location_text");
+    locationText = document.querySelector(".js-location span");
 const API_KEY = "hLlKf8_5PodsEsG7-EQY34r7L-RfL04DMVloyNySGcA";
 const IMAGEURL = `https://api.unsplash.com/photos/random/?client_id=${API_KEY}&orientation=landscape&query=landscape`;
 
@@ -38,7 +38,11 @@ function getBackground() {
         .then(response => response.json())
         .then(json => {
             const image = json;
-            if (image.urls && image.urls.full && image.location.city && image.location.country && image.location.name) {
+            if (image.urls && 
+                image.urls.full && 
+                image.location.city && 
+                image.location.country && 
+                image.location.name) {
                 const full = image.urls.full;
                 const city = image.location.city;
                 const country = image.location.country;

@@ -5,31 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href='css/style.css'>
-    <title>16_May_2020_Study_JS</title>
+    <title>JS_Study_clock&weather</title>
 </head>
 
 <body>
     <!--var : (function scope) 변수 
         const : (block scope) constant 상수 변수
         let : (block scope) 변경 가능 변수 -->
-    <!-- <h1></h1>
-    <script src="js/index.js"></script> -->
+ 
+    <!-- center section start -->
     <section class="center">
-        <div class="clock">
-            <h2 class="clock_text">00:00:00</h2>
+        <!-- clock start -->
+        <div class="js-clock clock">
+            <h2 class="clock__text">00:00:00</h2>
         </div>
-        <div class="myName"></div>
-        <!-- to do list -->
+        <!-- clock end -->
+        <div class="js-name name"></div>
+        <!-- to do List start -->
+        <div>
+            <form class="js-to-do to-do">
+                <input class="js-add-to-do to-do__add-to-do" placeholder="할일을 작성하세요." type="text" />
+            </form>
+            <ul class="js-list list">
+            </ul>
+        </div>
+        <!-- to do list end -->
     </section>
-    <div class="location">
-        <span class="location_text"></span>
+    <!-- center section end -->
+    <!-- location start -->
+    <div class="js-location location">
+        <span class="location__text"></span>
     </div>
-
-    <!-- weather / location -->
+    <!-- location end -->
+    <!-- weather start -->
+    <div class="js-weather weather">
+        <span class="weather__text"></span>
+        <span class="sunrise__text"></span>
+    </div>
+    <!-- weather end -->
 
     <script src="js/clock.js"></script>
     <script src="js/hello.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/todo.js"></script>
 </body>
 
 </html>
